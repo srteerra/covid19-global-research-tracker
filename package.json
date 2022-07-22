@@ -16,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@vue/compiler-sfc": "^3.2.37",
+    "axios": "^0.27.2",
     "babel-loader": "^8.2.5",
     "bootstrap": "^4.6.1",
     "clean-webpack-plugin": "^4.0.0",
@@ -39,10 +40,14 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
+    "@hapi/boom": "^9.1.4",
     "bootstrap-vue": "^2.22.0",
+    "cross-env": "^7.0.3",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "jquery": "^3.6.0",
+    "mongoose": "^6.4.6",
+    "node-dev": "^7.4.3",
     "sass": "^1.53.0",
     "vue": "^2.6.14",
     "vue-router": "^3.5.2",
