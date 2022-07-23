@@ -1,6 +1,6 @@
 const mongoConnection = require("../database");
 const boom = require("@hapi/boom");
-
+const TrialModel = require("../models/trials");
 class UsersServices {
   constructor() {}
 
@@ -22,7 +22,8 @@ class UsersServices {
   //   }
 
   async find(cb, next) {
-    mongoConnection.query("db.trials.find()", (err, rows, fields) => {
+    return await TrialModel.find({}, null, { limit: 2 });
+    /* mongoConnection.query("db.trials.find()", (err, rows, fields) => {
       try {
         if (err) console.log("Invalid request");
 
@@ -30,7 +31,7 @@ class UsersServices {
       } catch (error) {
         next(error);
       }
-    });
+    }); */
   }
 
   //   async create(data, cb, next) {
