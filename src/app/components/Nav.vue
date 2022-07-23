@@ -34,7 +34,11 @@
           <a class="nav-link" href="#">FAQ</a>
         </li>
         <li class="nav-item px-1 ml-3">
-          <b-button id="primary__btn" class="nav-item font-weight-bold">
+          <b-button
+            id="primary__btn"
+            class="nav-item font-weight-bold"
+            @click="showRegisterTrial()"
+          >
             Register a trial
           </b-button>
         </li>
@@ -44,8 +48,12 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "Nav",
+  methods: {
+    ...mapActions(["showRegisterTrial"]),
+  },
 };
 </script>
 
