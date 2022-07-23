@@ -11,7 +11,7 @@ const path = require("path");
 
 // INITIALIZING
 const app = express();
-app.set("port", process.env.PORT || 9000);
+app.set("port", process.env.PORT || 9090);
 
 //----------------Routes--------------
 routerApi(app);
