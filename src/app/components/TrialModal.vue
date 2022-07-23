@@ -27,7 +27,9 @@
       <div class="row mt-2 trial__content">
         <div class="col-12 col-xl-6">
           <div class="col">
-            <div id="mapTrail"></div>
+            <div class="row">
+              <div id="mapTrail"></div>
+            </div>
             <div class="row py-4">
               <p class="mr-3 font-weight-bold">Countries:</p>
               <p class="font-weight-regular">United Kingdom</p>
@@ -143,7 +145,7 @@ export default {
   },
   mounted() {
     mapboxgl.accessToken =
-      "pk.eyJ1Ijoic3J0ZWVycmEiLCJhIjoiY2w1eDhhc2sxMHIxcDNlcGdrbzQyYmJtZCJ9.jGpE9aCmars0VajGkg0K0g";
+      "pk.eyJ1Ijoic3J0ZWVycmEiLCJhIjoiY2w1eDg3anZlMHJkbDNlbGMxMHRsbGkwcyJ9.LLOJIDR-hgNSc9IZ1fY8Ig";
 
     const map = new mapboxgl.Map({
       container: "mapTrail", // container ID

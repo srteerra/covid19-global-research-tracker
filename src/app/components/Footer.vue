@@ -1,5 +1,5 @@
 <template>
-  <footer class="mt-5 p-5">
+  <footer class="p-5">
     <div class="container-fluid text-center text-md-left p-5">
       <div class="row">
         <div class="col-md-5 my-3 logo text-center">
@@ -62,6 +62,7 @@ footer {
   padding: auto 0;
   background-color: #1e4760;
   color: white;
+  margin-top: 50px;
   .logo img {
     width: 200px;
   }

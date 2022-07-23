@@ -11,7 +11,12 @@
                     class="row justify-content-center justify-content-xl-start align-items-center"
                   >
                     <p class="mr-2">Order by</p>
-                    <b-form-select id="rounded__input" class="w-50" />
+                    <b-form-select
+                      id="rounded__input"
+                      class="w-50"
+                      v-model="selected"
+                      :options="options"
+                    />
                   </div>
                 </div>
                 <div class="col-12 col-xs-6 col-lg-4 col-xl-3">
@@ -62,9 +67,9 @@
                         class="mb-5 w-50"
                       >
                         <p>From:</p>
-                        <b-form-input id="inputFrom" type="date"></b-form-input>
+                        <b-form-datepicker id="inputFrom"></b-form-datepicker>
                         <p>To</p>
-                        <b-form-input id="inputTo" type="date"></b-form-input>
+                        <b-form-datepicker id="inputTo"></b-form-datepicker>
                       </b-form-group>
 
                       <!-- study design -->
@@ -118,7 +123,121 @@
         </div>
         <div class="col-12 col-xl-8 p-0 pl-xl-5 order-1 order-xl-2">
           <div class="row my-5 my-xl-0 mb-xl-5">
-            <div class="container-fluid" id="trail__container">
+            <div class="container-fluid mb-4" id="trail__container">
+              <div class="row justify-content-center">
+                <div class="col px-5 py-4">
+                  <div class="row">
+                    <p class="font-weight-bold" style="opacity: 50%">
+                      2022-08-21
+                    </p>
+                    <p class="font-weight-bold">
+                      In the general population, do specific forms of COVID-19
+                      vaccine information, above simple information that they
+                      are safe and effective, increase willingness to be
+                      vaccinated?
+                    </p>
+                  </div>
+                  <div class="row pt-5">
+                    <p class="font-weight-bold mr-3">Study Type:</p>
+                    <p>Observational</p>
+                    <p class="font-weight-bold mr-3 ml-5">Study Design:</p>
+                    <p>Cross-Sectional</p>
+                    <p class="font-weight-bold mr-3 ml-5">Source:</p>
+                    <p>clinicaltrials.gov</p>
+                  </div>
+                </div>
+                <div class="col-1" v-if="windowWidth > 1050">
+                  <div class="trail__container__aside">
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <b-icon
+                        id="arr_aside"
+                        icon="arrow-right-circle"
+                        class="h3"
+                      ></b-icon>
+                      <div class="col trail__aside__content">
+                        <div class="row trail__aside__abstract">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellendus, explicabo?Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Repellendus,
+                            explicabo?Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Repellendus, explicabo?
+                          </p>
+                        </div>
+                        <div class="row trail__aside__more">
+                          <b-button
+                            variant="outline-light"
+                            class="py-2 px-3 mt-3"
+                            @click="showTrialModal()"
+                            >View more</b-button
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid mb-4" id="trail__container">
+              <div class="row justify-content-center">
+                <div class="col px-5 py-4">
+                  <div class="row">
+                    <p class="font-weight-bold" style="opacity: 50%">
+                      2022-08-21
+                    </p>
+                    <p class="font-weight-bold">
+                      In the general population, do specific forms of COVID-19
+                      vaccine information, above simple information that they
+                      are safe and effective, increase willingness to be
+                      vaccinated?
+                    </p>
+                  </div>
+                  <div class="row pt-5">
+                    <p class="font-weight-bold mr-3">Study Type:</p>
+                    <p>Observational</p>
+                    <p class="font-weight-bold mr-3 ml-5">Study Design:</p>
+                    <p>Cross-Sectional</p>
+                    <p class="font-weight-bold mr-3 ml-5">Source:</p>
+                    <p>clinicaltrials.gov</p>
+                  </div>
+                </div>
+                <div class="col-1" v-if="windowWidth > 1050">
+                  <div class="trail__container__aside">
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <b-icon
+                        id="arr_aside"
+                        icon="arrow-right-circle"
+                        class="h3"
+                      ></b-icon>
+                      <div class="col trail__aside__content">
+                        <div class="row trail__aside__abstract">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellendus, explicabo?Lorem ipsum dolor sit
+                            amet consectetur adipisicing elit. Repellendus,
+                            explicabo?Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Repellendus, explicabo?
+                          </p>
+                        </div>
+                        <div class="row trail__aside__more">
+                          <b-button
+                            variant="outline-light"
+                            class="py-2 px-3 mt-3"
+                            @click="showTrialModal()"
+                            >View more</b-button
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid mb-4" id="trail__container">
               <div class="row justify-content-center">
                 <div class="col px-5 py-4">
                   <div class="row">
@@ -180,23 +299,28 @@
       </div>
     </div>
     <TrialModal v-if="TrialModalView" />
+    <RegisterTrialVue v-if="RegisterTrialView" />
   </div>
 </template>
 
 <script>
 import { mapActions, mapState } from "vuex";
 import TrialModal from "../components/TrialModal.vue";
+import RegisterTrialVue from "../components/RegisterTrial.vue";
 
 export default {
   name: "HomeView",
   components: {
     TrialModal,
+    RegisterTrialVue,
   },
   data() {
     return {
       StatusSelection: "",
       OrderBy: "",
       ItemsPerPage: 3,
+      options: ["Newest First", "Oldest First", "A-Z", "Z-A"],
+      selected: "Newest First",
     };
   },
   methods: {
@@ -209,7 +333,7 @@ export default {
     windowWidth() {
       return this.$store.state.windowWidth;
     },
-    ...mapState(["TrialModalView"]),
+    ...mapState(["TrialModalView", "RegisterTrialView"]),
   },
 };
 </script>

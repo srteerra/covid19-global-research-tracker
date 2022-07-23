@@ -4,4 +4,5 @@ export default {
   windowWidth: window.innerWidth,
   showingModal: false,
   TrialModalView: false,
+  RegisterTrialView: false,
 };
