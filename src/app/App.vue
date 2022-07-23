@@ -1,7 +1,8 @@
 <template>
   <div>
+    <div class="modal-shadow" v-if="showingModal"></div>
     <Nav />
-    <router-view />
+    <router-view class="p-0 px-lg-5" />
     <Footer />
   </div>
 </template>
@@ -10,6 +11,7 @@
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import axios from "axios";
+import { mapState } from "vuex";
 
 export default {
   name: "App",
@@ -22,7 +24,19 @@ export default {
       console.log(res);
     });
   },
+  computed: {
+    ...mapState(["showingModal"]),
+  },
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.modal-shadow {
+  position: fixed;
+  background-color: black;
+  opacity: 40%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 15;
+}
+</style>

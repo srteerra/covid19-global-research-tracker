@@ -15,7 +15,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="ml-auto navbar-nav">
+      <ul class="ml-auto navbar-nav align-items-center">
         <li class="nav-item active">
           <a class="nav-link" href="#"
             >Home <span class="sr-only">(current)</span></a
@@ -33,12 +33,10 @@
         <li class="nav-item px-1">
           <a class="nav-link" href="#">FAQ</a>
         </li>
-        <li class="nav-item px-1">
-          <button
-            class="nav-item register-button px-4 py-2 rounded-pill font-weight-bold"
-          >
-            Register a trail
-          </button>
+        <li class="nav-item px-1 ml-3">
+          <b-button id="primary__btn" class="nav-item font-weight-bold">
+            Register a trial
+          </b-button>
         </li>
       </ul>
     </div>
@@ -53,12 +51,6 @@ export default {
 
 <style lang="scss">
 .logo img {
-  width: 200px;
-}
-.register-button {
-  background-color: #1e4760;
-  color: white;
-  outline: none;
-  border: none;
+  width: 250px;
 }
 </style>

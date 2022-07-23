@@ -3,6 +3,7 @@
 "use-strict";
 import Vue from "vue";
 import App from "./App.vue";
+import store from "./store";
 import router from "./routes";
 
 import "bootstrap";
@@ -14,5 +15,11 @@ Vue.use(BootstrapVueIcons);
 
 new Vue({
   router,
+  store,
   render: (h) => h(App),
 }).$mount("#app");
+
+// On resize change
+window.addEventListener("resize", () => {
+  store.commit("WINDOW_WIDTH");
+});

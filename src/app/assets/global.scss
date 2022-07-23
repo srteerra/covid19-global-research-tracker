@@ -6,6 +6,24 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: white;
   box-sizing: border-box;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar-track {
+    border: none;
+    padding: 2px 0;
+    background-color: #ffffff;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $primary;
+    border: none;
+  }
 }
 
 a {
@@ -37,5 +55,13 @@ li {
   background-color: transparent;
   color: $dark;
   border: 1px solid $dark;
+  border-radius: 40px;
+}
+
+#rounded__input {
+  padding: 5px 15px;
+  color: $dark;
+  border: 1px solid $dark;
+  outline: none;
   border-radius: 40px;
 }
