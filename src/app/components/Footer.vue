@@ -62,11 +62,7 @@ footer {
   padding: auto 0;
   background-color: #1e4760;
   color: white;
-<<<<<<< HEAD
-
-=======
   margin-top: 50px;
->>>>>>> 99eaef81be06f9d29a44e964491d6608ded00da0
   .logo img {
     width: 200px;
   }

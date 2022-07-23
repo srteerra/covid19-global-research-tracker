@@ -17,21 +17,23 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="ml-auto navbar-nav align-items-center">
         <li class="nav-item active">
-          <a class="nav-link" href="#"
-            >Home <span class="sr-only">(current)</span></a
+          <router-link class="nav-link" to="/"
+            >Home <span class="sr-only">(current)</span></router-link
           >
         </li>
         <li class="nav-item px-1">
-          <a class="nav-link px-1" href="#">Analitics</a>
+          <router-link class="nav-link px-1" to="/analitics"
+            >Analitics</router-link
+          >
         </li>
         <li class="nav-item px-1">
-          <a class="nav-link" href="#">About</a>
+          <router-link class="nav-link" to="/">About</router-link>
         </li>
         <li class="nav-item px-1">
-          <a class="nav-link" href="#">Support</a>
+          <router-link class="nav-link" to="/">Support</router-link>
         </li>
         <li class="nav-item px-1">
-          <a class="nav-link" href="#">FAQ</a>
+          <router-link class="nav-link" to="/">FAQ</router-link>
         </li>
         <li class="nav-item px-1 ml-3">
           <b-button
