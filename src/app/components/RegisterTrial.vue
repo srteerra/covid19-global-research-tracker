@@ -13,14 +13,11 @@
         </b-button>
       </div>
       <div class="row">
-        <h5 class="font-weight-bold">
-          In the general population, do specific forms of COVID-19 vaccine
-          information, above simple information that they are safe and
-          effective, increase willingness to be vaccinated?
-        </h5>
+        <h5 class="font-weight-bold">Register your trial now.</h5>
         <h5 class="font-weight-bold" style="opacity: 50%">
-          COVID-19 vaccination views: Oxford Coronavirus Explanations,
-          Attitudes, and Narratives Survey (OCEANS III)
+          Before proceeding with the registration you must take into account the
+          rules and regulations applied to data handling proposed by the
+          platform.
         </h5>
       </div>
       <hr />
